@@ -1,0 +1,230 @@
+/* Genel stil */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Üst Navigasyon Barı */
+header {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.title {
+    font-size: 20px;
+    color: #5f6368;
+    font-weight: bold;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    font-size: 24px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.profile-icon {
+    width: 35px;
+    height: 35px;
+    background-color: #00695c;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Yan menü (sidebar) */
+.sidebar {
+    width: 240px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 60px); /* Üst barın yüksekliğini çıkarıyoruz */
+    position: sticky;
+    top: 60px; /* Üst barın hemen altında başlar */
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    color: #5f6368;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #5f6368;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a.active {
+    background-color: #e8f0fe;
+    color: #1967d2;
+}
+
+.sidebar ul li a:hover {
+    background-color: #e8f0fe;
+    color: #1967d2;
+}
+
+/* Ana içerik alanı */
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Ders kartları */
+.class-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.class-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: 200px; /* Sabit yükseklik */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.class-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Kartın üst kısmı (renkli bölüm) */
+.card-header {
+    background: linear-gradient(to right, #f76b1c, #ff967a); /* Degrade renk */
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.class-info h3 {
+    font-size: 18px;
+    color: white;
+    margin: 0;
+}
+
+.class-info p {
+    font-size: 14px;
+    color: white;
+    margin: 5px 0 0;
+}
+
+/* Üç nokta simgesi */
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Kart alt başlık (öğretmen adı) */
+.card-subheader {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    background-color: #e8eaf6; /* Alt başlığın arka plan rengi */
+    text-align: left;
+}
+
+/* Kart içeriği - Profil simgesi */
+.card-content {
+    position: absolute;
+    bottom: 50px;
+    right: 10px;
+}
+
+.profile-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #00695c;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Kart alt kısmı - Kamera ve klasör simgeleri */
+.card-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 10px;
+}
+
+.footer-icon {
+    font-size: 24px;
+    color: #777;
+    cursor: pointer;
+}

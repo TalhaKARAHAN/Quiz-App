@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ders Sayfası</title>
+    <link rel="stylesheet" href="lesson.css">
+</head>
+<body>
+
+    <!-- Üst Menü (Navigasyon) -->
+    <header>
+        <nav class="top-nav">
+            <ul>
+                <li><a href="#" class="active">Akış</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Üst Kısım (Banner) -->
+    <section class="banner">
+        <div class="course-banner">
+            <h1 class="course-title">Biyoloji</h1>
+            <p class="course-subtitle">9.Sınıf</p>
+        </div>
+    </section>
+
+    <!-- Ana İçerik -->
+    <main class="main-content">
+
+        <!-- Sol Bölüm: Teslim Tarihi Yaklaşan Ödevler -->
+        <aside class="left-sidebar">
+            <div class="assignment-box">
+                <h2>Teslim tarihi yaklaşan ödevler</h2>
+                <p>Bekleyen bir quiz var</p>
+                <button class="view-all-btn" onclick="goToQuiz()">Quize Git</button> <!-- Quize Git butonu -->
+            </div>
+        </aside>
+
+        <!-- Orta Bölüm: Duyuru ve Gönderiler -->
+        <section class="announcements">
+            <div class="announcement-card">
+                
+            </div>
+
+            <div class="announcement-card">
+                
+                <div class="announcement-body">
+                   
+                </div>
+            </div>
+
+            <div class="announcement-card">
+             
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function goToQuiz() {
+            window.location.href = 'quiz.html'; 
+        }
+    </script>
+
+</body>
+</html>
